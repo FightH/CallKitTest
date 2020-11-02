@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6B863B20254FA11C0058CBD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B1F254FA11C0058CBD5 /* AppDelegate.swift */; };
-		6B863B22254FA11C0058CBD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B21254FA11C0058CBD5 /* SceneDelegate.swift */; };
 		6B863B24254FA11C0058CBD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B23254FA11C0058CBD5 /* ViewController.swift */; };
 		6B863B27254FA11C0058CBD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B863B25254FA11C0058CBD5 /* Main.storyboard */; };
 		6B863B29254FA11E0058CBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B863B28254FA11E0058CBD5 /* Assets.xcassets */; };
 		6B863B2C254FA11E0058CBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B863B2A254FA11E0058CBD5 /* LaunchScreen.storyboard */; };
 		6B863B37254FA11E0058CBD5 /* CallKitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B36254FA11E0058CBD5 /* CallKitTestTests.swift */; };
 		6B863B42254FA11E0058CBD5 /* CallKitTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B41254FA11E0058CBD5 /* CallKitTestUITests.swift */; };
+		6B863B75254FA56C0058CBD5 /* CallKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B74254FA56C0058CBD5 /* CallKitManager.swift */; };
+		6B863B7A254FA5B60058CBD5 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B79254FA5B60058CBD5 /* Call.swift */; };
+		6B863B7F254FA7390058CBD5 /* ProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B7E254FA7390058CBD5 /* ProviderDelegate.swift */; };
+		6B863B84254FA9BA0058CBD5 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B83254FA9BA0058CBD5 /* AudioManager.swift */; };
+		6B863B89254FB1610058CBD5 /* NSUserActivity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B863B88254FB1610058CBD5 /* NSUserActivity+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,6 @@
 /* Begin PBXFileReference section */
 		6B863B1C254FA11C0058CBD5 /* CallKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B863B1F254FA11C0058CBD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B863B21254FA11C0058CBD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6B863B23254FA11C0058CBD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6B863B26254FA11C0058CBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B863B28254FA11E0058CBD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		6B863B3D254FA11E0058CBD5 /* CallKitTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallKitTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B863B41254FA11E0058CBD5 /* CallKitTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitTestUITests.swift; sourceTree = "<group>"; };
 		6B863B43254FA11E0058CBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B863B74254FA56C0058CBD5 /* CallKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitManager.swift; sourceTree = "<group>"; };
+		6B863B79254FA5B60058CBD5 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		6B863B7E254FA7390058CBD5 /* ProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderDelegate.swift; sourceTree = "<group>"; };
+		6B863B83254FA9BA0058CBD5 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		6B863B88254FB1610058CBD5 /* NSUserActivity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				6B863B1F254FA11C0058CBD5 /* AppDelegate.swift */,
-				6B863B21254FA11C0058CBD5 /* SceneDelegate.swift */,
 				6B863B23254FA11C0058CBD5 /* ViewController.swift */,
+				6B863B79254FA5B60058CBD5 /* Call.swift */,
+				6B863B83254FA9BA0058CBD5 /* AudioManager.swift */,
+				6B863B74254FA56C0058CBD5 /* CallKitManager.swift */,
+				6B863B7E254FA7390058CBD5 /* ProviderDelegate.swift */,
+				6B863B88254FB1610058CBD5 /* NSUserActivity+Extension.swift */,
 				6B863B25254FA11C0058CBD5 /* Main.storyboard */,
 				6B863B28254FA11E0058CBD5 /* Assets.xcassets */,
 				6B863B2A254FA11E0058CBD5 /* LaunchScreen.storyboard */,
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B863B84254FA9BA0058CBD5 /* AudioManager.swift in Sources */,
 				6B863B24254FA11C0058CBD5 /* ViewController.swift in Sources */,
+				6B863B7A254FA5B60058CBD5 /* Call.swift in Sources */,
 				6B863B20254FA11C0058CBD5 /* AppDelegate.swift in Sources */,
-				6B863B22254FA11C0058CBD5 /* SceneDelegate.swift in Sources */,
+				6B863B75254FA56C0058CBD5 /* CallKitManager.swift in Sources */,
+				6B863B7F254FA7390058CBD5 /* ProviderDelegate.swift in Sources */,
+				6B863B89254FB1610058CBD5 /* NSUserActivity+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26FMV69ZW7;
 				INFOPLIST_FILE = CallKitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.CallKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26FMV69ZW7;
 				INFOPLIST_FILE = CallKitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.CallKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

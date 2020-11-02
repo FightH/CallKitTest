@@ -19,8 +19,42 @@ class CallKitTestTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        //拨打电话
+        if #available(iOS 10.0, *) {
+            CallKitManager.shared.startCall(handle:"PhoneNumber value", videoEnabled: false)
+        } else {
+              //原来打电话的逻辑
+        }
+        
+        
+        //挂断电话
+        if #available(iOS 10.0, *) {
+            if let call = CallKitManager.shared.calls.first {
+                CallKitManager.shared.end(call: call)
+            }
+        } else {
+            
+        }
+        
+        // 暂时挂起
+        if #available(iOS 10.0, *) {
+            if let call = CallKitManager.shared.calls.first {
+                   CallKitManager.shared.setHeld(call: call, onHold: true)
+            }
+        } else {
+            
+            
+        }
+        
+        // 麦克风静音
+        if #available(iOS 10.0, *) {
+            if let call = CallKitManager.shared.calls.first {
+                   CallKitManager.shared.setMute(call: call, muted: true)
+            }
+        } else {
+            
+        }
+        
     }
 
     func testPerformanceExample() throws {
